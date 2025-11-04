@@ -1,0 +1,35 @@
+﻿﻿№5
+Дан двумерный массив размерности N*М. Найти количество строк, сумма элементов в которых отрицательна.
+
+#include <stdio.h>
+
+int main()
+{
+    int N, M, i, j, T, A[10][10], sum;
+    printf("Vvedite N,M: ");
+    scanf_s("%d %d", &N, &M);
+
+    //1 часть
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < M; j++) {
+            scanf_s("%d", &A[i][j]);
+        }
+    }
+    //2 часть
+    T = 0;
+    for (i = 0; i < N; i++) {
+        sum = 0;
+        for (j = 0; j < M; j++) {
+            sum = sum + A[i][j];
+        }
+        //3 часть
+        if (sum < 0) {
+            T = T + 1;
+            
+        }
+    }
+
+    printf("Rezultat: %d\n", T);
+
+    return 0;
+}
