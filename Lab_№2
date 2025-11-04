@@ -1,0 +1,30 @@
+В.20. Дан одномерный массив из N элементов.
+Найти количество элементов, больших последнего элемента массива
+
+#include <stdio.h>
+int main (){
+ int N, T;
+ int i = 0;
+ float A [100];
+ float posl_elem;
+ printf("Vvedite razmer massiva: \n", &N);
+ scanf("%d", &N);
+ printf("Vvedite massiv: \n");
+ while (i<N) {
+  scanf("%f", &A[i]);
+  i = i+1;
+ }
+ 
+ T=0;
+ posl_elem=A[N-1];
+ i=0;
+ while(i<N-1){
+  if (A[i]>posl_elem){
+   T = T+1;
+  }
+  i=i+1;
+ }
+ printf("Result: %d", T);
+ 
+ return 0;
+}
