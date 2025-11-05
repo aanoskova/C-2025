@@ -9,7 +9,7 @@ int main() {
     printf("Vvedite chislo: ");
     scanf_s("%f %f %f %f", &a, &b, &c, &d);
 
-    float a1 = a, b1 = b, c1 = c, d1 = c;
+    float a1 = a, b1 = b, c1 = c, d1 = d;
 
     if (a > b && b > c && c > d) {
         a1 = (a + b) / 2.0f;
