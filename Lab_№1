@@ -31,10 +31,10 @@ int main() {
         if (d < min)
             min = d;
 
-        a = a + min;
-        b = b + min;
-        c = c + min;
-        d = d + min;
+        a1 = a + min;
+        b1 = b + min;
+        c1 = c + min;
+        d1 = d + min;
 
     }
     printf("Result: a = %2.1f, b = %2.1f, c = %2.1f, d = %2.1f", a, b, c, d);
