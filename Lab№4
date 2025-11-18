@@ -1,0 +1,26 @@
+//Дана строка символов. Подсчитать, сколько раз среди символов строки встречается буква 'X'
+#include <stdio.h>
+
+
+int main()
+{
+    char c;
+    int T = 0;
+
+    c = getchar();
+    while (c != EOF) {
+        if (c == 'x'/* || c == 'X'*/) {
+            T = T + 1;
+            
+        }
+        c = getchar();
+      
+    }
+    //putchar(T + '0');
+
+    printf("Vsego %d raz\n", T);
+
+    return 0;
+    
+
+}
