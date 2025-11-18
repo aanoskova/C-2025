@@ -24,3 +24,24 @@ int main()
     
 
 }
+
+
+
+
+//Дана строка символов. Преобразовать её, заменив все восклицательные знаки точками.
+#include <stdio.h>
+
+int main()
+{
+    char C;
+    C = getchar();
+    while (C != EOF) {
+        if (C == '!') {
+            putchar('.');
+        } else {
+            putchar(C);
+        }
+        C = getchar();
+    }
+    return 0;
+}
