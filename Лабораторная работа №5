@@ -1,0 +1,43 @@
+//Дан текст. Написать программу,печатающую только нечетные строки введенного текста. 
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+int main()
+{
+    FILE *bb, *aa;
+    char c;
+    int n = 1;
+
+    fopen_s(&bb, "text.txt", "w");
+    printf("vvedite text: \n");
+
+    while (scanf_s("%c", &c, 1) != EOF) {
+        fputc(c, bb);
+    }
+    fclose(bb);
+
+    fgetc(aa);
+
+
+
+
+    fopen_s(&aa, "text.txt", "r");
+    fopen_s(&bb, "read.txt", "w");
+
+//нечетные строки введенного текста
+    while (fscanf_s(aa, "%c", &c, 1) != EOF) {
+        if (n % 2 == 1) {
+            printf("%c", c);
+            fprintf(bb, "%c", c);
+        }
+
+        if (c == '\n') {
+            n = n + 1;
+        }
+    }
+    fprintf(bb, "\n Kolichestvo strok: %d", n);
+
+    fclose(aa);
+    fclose(bb);
+
+    return 0;
+}
