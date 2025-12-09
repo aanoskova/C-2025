@@ -24,7 +24,49 @@ int main()
 }
 
 
+//С проверкой
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
+int main() {
+    FILE* aa = NULL;   
+    FILE* bb = NULL;   
+    char c;
+    int n = 1;       
+
+    if (fopen_s(&aa, "text.txt", "r") != 0) {
+        printf("file is not open 'text.txt' for read.\n");
+        return 1; 
+    }
+
+    if (fopen_s(&bb, "read.txt", "w") != 0) {
+        printf("file is not open 'read.txt' for write.\n");
+        fclose(aa);  
+        return 1;  
+    }
+
+    while ((c = fgetc(aa)) != EOF) {
+       
+        if (c == '\n') {
+            n++;
+        }
+
+        if (n % 2 == 1) {
+            fputc(c, bb);
+        }
+    }
+
+    
+    if (aa != NULL) {
+        fclose(aa);
+    }
+    if (bb != NULL) {
+        fclose(bb);
+    }
+
+    printf("Obrabotka zavershena. Nechetnye stroki zapisany v 'read.txt'.\n");
+    return 0;
+}
 
 
 #define _CRT_SECURE_NO_WARNINGS
