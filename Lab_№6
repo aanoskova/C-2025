@@ -1,0 +1,16 @@
+На 3. Все переменные можно описать глобально. Передавать в функции ничего не надо.
+# include <stdio.h>
+ описание глобальных переменных;
+void vvod ( );         
+void obrabotka ( );  
+void  vyvod ( );
+
+void main( )
+{ vvod ( );          
+   obrabotka ( );  
+   vyvod ( );
+ }
+
+    void  vvod ( ) { . . .}      
+    void  obrabotka ( ) { . . .}   
+    void   vyvod ( ) {. . .}
