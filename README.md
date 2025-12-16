@@ -15,3 +15,5 @@
 <link>https://github.com/aanoskova/C-2025/blob/main/Lab_№5</link>
 <br>
 Лабораторная работа №6
+<link>https://github.com/aanoskova/C-2025/blob/main/Lab_№6</link>
+<br>
