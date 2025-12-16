@@ -18,3 +18,50 @@ void main( )
     void  vvod ( ) { . . .}      
     void  obrabotka ( ) { . . .}   
     void   vyvod ( ) {. . .}
+
+/*Дан одномерный массив из N элементов. 
+Каждый отрицательный элемент массива увеличить в три раза и вывести получившийся массив на экран*/
+
+#include <stdio.h>
+
+int N, A[50],i;
+
+void vvod();
+void obrabotka();
+void vyvod();
+
+void main() {
+    vvod();       
+    obrabotka();  
+    vyvod();     
+}
+
+
+void vvod() {
+    printf("vvedite kolichestvo elementov massiva (N): ");
+    scanf_s("%d", &N);
+
+    printf("Vvedite elementy massiva:\n");
+    for (i = 0; i < N; i++) {
+        printf("Element %d: ", i + 1);
+        scanf_s("%d", &A[i]);
+    }
+}
+
+
+void obrabotka() {
+    for (i = 0; i < N; i++) {
+        if (A[i] < 0) {  
+            A[i] = A[i] * 3;  
+        }
+    }
+}
+
+
+void vyvod() {
+    printf("Rezultat:\n");
+    for (i = 0; i < N; i++) {
+        printf("%d ", A[i]);  
+    }
+    printf("\n");  
+}
