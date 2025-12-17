@@ -65,3 +65,26 @@ void vyvod() {
     }
     printf("\n");  
 }
+
+
+int vvod() {
+    int r;
+    printf("vvedite kolichestvo elementov massiva (N): ");
+    scanf_s("%d", &N);
+
+    printf("Vvedite elementy massiva:\n");
+    for (i = 0; i < N; i++) {
+        printf("Element %d: ", i + 1);
+        scanf_s("%d", &A[i]);
+    }
+    return r;
+}
+
+
+void obrabotka() {
+    for (i = 0; i < N; i++) {
+        if (A[i] < 0) {
+            A[i] = A[i] * 3;
+        }
+    }r++;
+}
